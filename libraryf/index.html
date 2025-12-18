@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliotheca Nexus - Library Management System</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-open"></i>
+                    <h1>Bibliotheca Nexus</h1>
+                </div>
+                <div class="user-info">
+                    <i class="fas fa-user"></i> Welcome, Reader!
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" data-tab="browse">Browse Books</div>
+            <div class="tab" data-tab="rented">My Rented Books</div>
+            <div class="tab" data-tab="purchased">My Purchased Books</div>
+            <div class="tab" data-tab="transactions">Transaction History</div>
+        </div>
+        
+        <div class="tab-content active" id="browse">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search by book title or author...">
+                <select id="genre-filter">
+                    <option value="">All Genres</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Science Fiction">Science Fiction</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Biography">Biography</option>
+                    <option value="History">History</option>
+                    <option value="Self-Help">Self-Help</option>
+                    <option value="Historical">Historical</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Epic">Epic</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Post-Apocalyptic">Post-Apocalyptic</option>
+                    <option value="Thriller">Thriller</option>
+                </select>
+                <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+            
+            <div class="recommendation-section">
+                <h2 class="section-title">Recommended For You</h2>
+                <div class="books-grid" id="recommendations-container">
+                    <!-- Recommendations will be dynamically loaded here -->
+                </div>
+            </div>
+            
+            <hr style="margin: 30px 0; border: 1px solid #eee;">
+            
+            <h2 class="section-title">All Books</h2>
+            <div class="books-grid" id="books-container">
+                <!-- Books will be dynamically loaded here -->
+            </div>
+        </div>
+        
+        <div class="tab-content" id="rented">
+            <h2 class="section-title">My Rented Books</h2>
+            <div class="books-grid" id="rented-books-container">
+                <!-- Rented books will be dynamically loaded here -->
+            </div>
+            <div class="empty-state" id="empty-rented" style="display: none;">
+                <i class="fas fa-book"></i>
+                <h3>No Rented Books</h3>
+                <p>You haven't rented any books yet. Browse our collection to find something interesting!</p>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="purchased">
+            <h2 class="section-title">My Purchased Books</h2>
+            <div class="books-grid" id="purchased-books-container">
+                <!-- Purchased books will be dynamically loaded here -->
+            </div>
+            <div class="empty-state" id="empty-purchased" style="display: none;">
+                <i class="fas fa-shopping-bag"></i>
+                <h3>No Purchased Books</h3>
+                <p>You haven't purchased any books yet. Check out our collection to find your next read!</p>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="transactions">
+            <h2 class="section-title">Transaction History</h2>
+            <div id="transactions-container">
+                <!-- Transactions will be dynamically loaded here -->
+            </div>
+            <div class="empty-state" id="empty-transactions" style="display: none;">
+                <i class="fas fa-receipt"></i>
+                <h3>No Transactions Yet</h3>
+                <p>Your transaction history will appear here once you start renting or buying books.</p>
+            </div>
+            
+            <div class="bill" id="bill-container" style="display: none;">
+                <div class="bill-header">Transaction Bill</div>
+                <div class="bill-details">
+                    <div>Item</div>
+                    <div>Quantity</div>
+                    <div>Amount</div>
+                </div>
+                <div id="bill-items">
+                    <!-- Bill items will be dynamically added here -->
+                </div>
+                <div class="bill-total">
+                    <div>Total:</div>
+                    <div id="bill-total-amount">$0.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="notification" id="notification">
+        <!-- Notification messages will appear here -->
+    </div>
+
+    <script>
+        
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
