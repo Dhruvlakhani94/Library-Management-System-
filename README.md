@@ -32,25 +32,3 @@
 * **Advanced Filtering:** Real-time filtering by genre and live search capabilities to manage growing book inventories.
 * **Responsive UI:** A mobile-first design that adapts from desktop grids to single-column mobile layouts for a seamless reading experience.
 
----
-
-## 📈 Technical Deep Dive
-
-### The Recommendation Logic
-
-To provide value, the system doesn't just show random books. It calculates a "Relevance Score" () for every available book based on the user's library interaction:
-
-Where:
-
-*  if the genre matches a previously interacted genre.
-*  if the author matches a previously interacted author.
-
-This ensures the user's dashboard is always populated with content they are statistically more likely to engage with.
-
----
-
-
-
----
-
-**Would you like me to help you expand the `Book` class to include a persistent storage feature using LocalStorage?**
