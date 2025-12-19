@@ -65,5 +65,3 @@ git clone https://github.com/yourusername/bibliotheca-nexus.git
 
 2. **Open the Application:**
 Launch `index.html` in any browser to see the OOP architecture in action.
-
-**Would you like me to show you how to implement Inheritance by creating specialized `EBook` or `PhysicalBook` subclasses?**
